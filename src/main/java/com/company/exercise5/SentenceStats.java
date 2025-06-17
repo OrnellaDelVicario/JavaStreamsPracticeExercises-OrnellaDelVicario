@@ -29,6 +29,7 @@ public class SentenceStats {
     }
 
         public static void main(String[] args) {
+            System.out.println("\nBased on the following list of sentences: \n");
             List<String> sentences = List.of(
                     "Java is powerful",
                     "Collectors are useful",
@@ -38,6 +39,7 @@ public class SentenceStats {
                     .collect(SentenceStatsCollector.toSentenceStats());
 
             System.out.println(sentences);
+            System.out.println("\nThese are the stats:");
             System.out.println(stats);
         }
     }

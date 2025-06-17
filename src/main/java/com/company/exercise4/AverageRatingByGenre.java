@@ -10,7 +10,7 @@ public class AverageRatingByGenre {
         return movies.stream()
                 .collect(Collectors.groupingBy(
                  Movie::getGenre,
-                        Collectors.averagingDouble(Movie::getRating)
+                 Collectors.averagingDouble(Movie::getRating)
                 ));
     }
 
@@ -23,6 +23,7 @@ public class AverageRatingByGenre {
                 new Movie("Shrek", "Comedy", 7.9)
         );
 
+        System.out.println("\nAverage Rating by Genre: \n");
         Map<String, Double> averageByGenre = averageRating(movies);
         averageByGenre.forEach((genre, avg) ->
                 System.out.printf("%s: %.2f%n", genre, avg));
